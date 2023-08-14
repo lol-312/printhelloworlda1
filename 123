@@ -476,7 +476,7 @@ function HelloLib:MakeWindow(WindowConfig)
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
 	if WindowConfig.IntroEnabled == nil then
-		WindowConfig.IntroEnabled = true
+		WindowConfig.IntroEnabled = false
 	end
 --[[	WindowConfig.IntroText = WindowConfig.IntroText or "Hello Library"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
@@ -652,14 +652,14 @@ function HelloLib:MakeWindow(WindowConfig)
 		UIHidden = true
 		HelloLib:MakeNotification({
 			Name = "Interface Hidden",
-			Content = "Tap RightShift to reopen the interface",
+			Content = "Tap Insert to reopen the interface",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
 	end)
 
 	AddConnection(UserInputService.InputBegan, function(Input)
-		if Input.KeyCode == Enum.KeyCode.RightShift and UIHidden then
+if Input.KeyCode == Enum.KeyCode.Insert and UIHidden == true then
 			MainWindow.Visible = true
 		end
 	end)
