@@ -684,7 +684,7 @@ function HelloLib:MakeWindow(WindowConfig)
 		Minimized = not Minimized    
 	end)
 
---[[	local function LoadSequence()
+	local function LoadSequence()
 		MainWindow.Visible = false
 		local LoadSequenceLogo = SetProps(MakeElement("Image", WindowConfig.IntroIcon), {
 			Parent = Hello,
@@ -715,7 +715,7 @@ function HelloLib:MakeWindow(WindowConfig)
 		MainWindow.Visible = true
 		LoadSequenceLogo:Destroy()
 		LoadSequenceText:Destroy()
-	end ]]
+	end 
 
 	if WindowConfig.IntroEnabled then
 		LoadSequence()
