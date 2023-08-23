@@ -979,7 +979,7 @@ if Input.KeyCode == Enum.KeyCode.Insert and UIHidden == true then
 
 				AddConnection(Click.MouseButton1Up, function()
 					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(HelloLib.Themes[HelloLib.SelectedTheme].Second.R * 255 + 3, HelloLib.Themes[HelloLib.SelectedTheme].Second.G * 255 + 3, HelloLib.Themes[HelloLib.SelectedTheme].Second.B * 255 + 3)}):Play()
-					SaveCfg(game.GameId)
+				--	SaveCfg(game.GameId)
 					Toggle:Set(not Toggle.Value)
 				end)
 
